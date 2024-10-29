@@ -3,10 +3,11 @@ import bodyParser from "body-parser";
 import axios from "axios";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
 
 const app = express();
 const port = 3000;
-const apiKey = "e92f490b788dbe1436345f2fc32bd64e";
+const apiKey = process.env.API_KEY;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static("public"));
